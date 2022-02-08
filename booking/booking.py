@@ -24,11 +24,7 @@ class Booking(webdriver.Chrome):
             self.quit()
 
     def land_first_page(self):
-        self.get(const.BASE_URL)
-
-    def __exit__(self, exc_type, exc_val, exc_tb):
-        if self.teardown:
-            self.quit()
+        self.get(const.BASE_URL)   
 
     def change_currency(self, currency=None):
         currency_element = self.find_element(
